@@ -12,13 +12,15 @@ This compose creates and mounts 3 directories(data, logs, wal) for persistence a
 
 ### INSTALLATION:
 Simply go ahead and run the run.sh and it will take care of everything.
-``` bash run.sh
+```
+bash run.sh
 ```
 
 
 ### To login to the container:
 
-```docker exec -it pg(or container_name) /bin/bash
+```
+docker exec -it pg(or container_name) /bin/bash
 ```
 ### To login if you have psql installed:
 
