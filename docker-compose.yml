@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  postgres:
+    build: .
+    container_name: pg
+    image: postgres
+    ports:
+      - '5432:5432'
+    volumes:
+      - './data:/pg_data'
+      - './wal:/wal_logs'
+      - './logs:/logs'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_TDE_KEY_FILE: f9bbf526005dc9c2fda17455f1c905f4
+
+volumes:
+  data:
+    driver: local
+  wal:
+    driver: local
+  logs:
+    driver: local
